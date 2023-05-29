@@ -1,0 +1,16 @@
+.container{
+    animation: bounce 1s 1;
+    @apply bg-inherit m-5 p-5 min-h-[calc(100vh-80px)] rounded-3xl  flex  justify-center items-center  shadow-2xl;
+    
+}
+@keyframes bounce {
+    0% {
+      transform: translateY(-100%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    100% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    
+  }
