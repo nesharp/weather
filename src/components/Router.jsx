@@ -5,7 +5,7 @@ import { Panel } from "./Panel/Panel.module";
 import { Temperature } from "./Panel/Temperature/Temperature.module";
 import { Info } from "./Container/Info/Info.module";
 import { Hourly } from "./Container/Hourly/Hourly.module";
-
+import { Map } from "./Container/Map/Map.module";
 export const Router = () => {
     return (
         <BrowserRouter>
@@ -21,6 +21,7 @@ export const Router = () => {
                             
                         </Hourly>
                     </Info>
+                    <Map/>
                 </Container>
             } />
             {/* <Route path="/about" element={<About />} />

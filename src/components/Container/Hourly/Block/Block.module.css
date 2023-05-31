@@ -1,5 +1,5 @@
 .block{
-    @apply bg-inherit h-5/6 w-32 my-auto mx-5 rounded-lg shadow-lg  ;
+    @apply bg-inherit h-5/6 w-32 mx-5 rounded-lg shadow-lg my-4 hover:shadow-2xl  hover:my-2 transition-all;
 }
 .block h6{
     @apply text-center text-sm m-3;
