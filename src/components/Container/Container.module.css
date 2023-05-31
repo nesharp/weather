@@ -1,7 +1,6 @@
 .container{
-    animation: bounce 1s 1;
-    @apply bg-inherit m-5 p-5 min-h-[calc(100vh-80px)] rounded-3xl  flex  justify-center items-center  shadow-2xl;
-    
+    /* animation: bounce 1s 1; */
+    @apply bg-inherit m-5 bg-blend-multiply  min-h-[calc(100vh-80px)] rounded-3xl  flex  justify-between  shadow-2xl bg-no-repeat bg-cover;
 }
 @keyframes bounce {
     0% {

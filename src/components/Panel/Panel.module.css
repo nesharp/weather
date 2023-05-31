@@ -1,0 +1,6 @@
+.panel{
+    @apply bg-inherit  blur-3xl  w-64 h-[calc(100vh-80px)] rounded-3xl border-solid border-2 shadow-2xl border-white
+}
+.panel h2{
+    @apply w-fit mx-auto text-2xl font-bold  text-yellow-600 m-5
+}

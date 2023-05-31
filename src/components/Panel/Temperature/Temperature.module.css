@@ -1,0 +1,6 @@
+.wrapper > h2{
+    @apply text-6xl font-bold mt-20;
+}
+.wrapper > img{
+    @apply h-60 mx-auto  mt-20
+}

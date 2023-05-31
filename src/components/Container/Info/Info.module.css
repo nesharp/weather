@@ -1,0 +1,12 @@
+.info{
+    @apply w-[calc(100%-256px)] p-10 text-yellow-600 text-lg
+}
+.info span{
+    @apply font-["Pacifico"] italic 
+}
+.info h4 {
+    @apply text-4xl mt-10 ml-1
+}
+.info p{
+    @apply w-60 text-justify mt-10 ml-1
+}
