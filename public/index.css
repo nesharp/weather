@@ -6,8 +6,8 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
--webkit-scrollbar {
-  width: 0px;
+::-webkit-scrollbar {
+  width: 0px
 }
 body {
   background: #d3cce3; /* fallback for old browsers */
@@ -22,4 +22,5 @@ body {
     #d3cce3
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-attachment: fixed;
+  
 }

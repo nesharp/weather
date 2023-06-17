@@ -5,16 +5,28 @@ import { store } from '../../../store/root'
 export const Info = ({ children }) => {
 	let localTime = new Date().getHours() + ':' + new Date().getMinutes()
 	const [desc, setDesk] = useState('')
+	const [wind, setWind] = useState({})
 	store.subscribe(() => {
-		setDesk(store.getState().weather.list[0].weather[0].main)
+		setDesk(store.getState().weather.list[0].weather[0].description)
+		setWind(store.getState().weather.list[0].wind)
 	})
 	return (
 		<div className={styles.info}>
-			<h3>
-				Local time: <span> {localTime} </span>
-			</h3>
-			<h4> {desc} </h4>
-			
+			<div className={styles.wrapper}>
+				<div className={styles.desc}>
+					<h3>
+						Local time: <span> {localTime} </span>
+					</h3>
+					<h4> {desc} </h4>
+				</div>
+				<div className={styles.wind}>
+					<h3>Wind</h3>
+					<h4>Speed: { wind.speed }</h4>
+					<h4>Gust: { wind.gust }</h4>
+					<h4>Deg: { wind.deg }</h4>
+					
+				</div>
+			</div>
 			{children}
 		</div>
 	)

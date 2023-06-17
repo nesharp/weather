@@ -1,6 +1,0 @@
-.map{
-    @apply w-[40%] absolute right-20 top-10 h-[50vh] hover:shadow-xl transition-all rounded-2xl
-}
-.map iframe{
-    @apply w-full h-full rounded-2xl shadow-xl
-}

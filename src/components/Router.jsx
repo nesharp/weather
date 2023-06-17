@@ -12,12 +12,13 @@ export const Router = () => {
 				<Route
 					path='/'
 					element={
-						<Container >
-							<Panel >
+						<Container>
+							<Panel>
 								<Temperature />
 							</Panel>
-							<Info >
-								<Hourly  ></Hourly>
+
+							<Info>
+								<Hourly></Hourly>
 							</Info>
 							{/* <Map/> */}
 						</Container>

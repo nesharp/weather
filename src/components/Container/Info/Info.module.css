@@ -1,12 +1,25 @@
 .info{
-    @apply w-[calc(100%-256px)] p-10 text-yellow-600 text-lg
+    @apply w-[calc(100%-256px)] p-10 text-yellow-600 text-lg   
 }
 .info span{
     @apply text-2xl text-yellow-600 font-["Pacifico"] 
 }
-.info h4 {
-    @apply text-2xl mt-8 mb-[40vh]
+.wrapper{
+    @apply flex mb-[20vh] items-end justify-center
 }
-/* .info p{
-    @apply w-60 text-justify mt-10 ml-1
-} */
+.info h4 {
+    @apply text-2xl mt-8 uppercase
+}
+.wind{
+    @apply border-solid border-2 border-white rounded-lg px-8 py-5 text-left text-lg shadow-lg ml-[10%]
+}
+.wind h3{
+    @apply text-2xl text-yellow-600 font-["Montset"] text-center mb-6
+}
+.wind h4{
+    @apply text-lg mb-3 mt-2 
+}
+.desc{
+    @apply border-solid border-2 border-white p-10 items-center rounded-xl shadow-lg
+
+}

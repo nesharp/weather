@@ -6,7 +6,6 @@ export const Block = ({ info }) => {
     const [date, setDate] = useState(info.dt_txt.split(" ")[0])
     const [id, setId] = useState(info.weather[0].icon)
     const [temp, setTemp] = useState(toCelsius(info.main.temp))
-    console.log(info)
     return (
 			<div className={styles.block}>
 				<h6>{date} </h6>
