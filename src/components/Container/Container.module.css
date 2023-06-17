@@ -1,12 +1,16 @@
 .container {
-	/* animation: bounce 2s 1 ; */
+	animation: bounce 2s 1 ;
+	
 	@apply bg-inherit m-5 bg-blend-multiply  min-h-[calc(100vh-80px)] rounded-3xl  flex  justify-between  shadow-2xl bg-no-repeat bg-cover;
 }
 @keyframes bounce {
 	0% {
 		transform: translateY(-100%);
 	}
-	 60% {
+	40%{
+		transform: translateY(-90%);
+	}
+	 80% {
 		transform: translateY(5%);
 	} 
 	100% {

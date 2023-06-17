@@ -10,11 +10,13 @@ export const Temperature = () => {
 	const [tempMin, setTempMin] = useState(0)
 	const [feels, setFeels] = useState(0)
 	store.subscribe(() => {
-		const temps = store.getState().weather.list[0].main
-		setTemp(toCelsius(temps.temp))
-		setTempMax(toCelsius(temps.temp_max))
-		setTempMin(toCelsius(temps.temp_min))
-		setFeels(toCelsius(temps.feels_like))
+		if (store.getState().weather.error !== 'error') {
+			const temps = store.getState().weather.list[0].main
+			setTemp(toCelsius(temps.temp))
+			setTempMax(toCelsius(temps.temp_max))
+			setTempMin(toCelsius(temps.temp_min))
+			setFeels(toCelsius(temps.feels_like))
+		}
 	})
 	return (
 		<div className={styles.wrapper}>
