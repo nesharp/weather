@@ -1,6 +1,13 @@
-.wrapper > h2{
-    @apply text-6xl font-bold mt-20;
+.wrapper{
+    @apply bg-transparent w-[90%] mx-auto  shadow-lg rounded-xl p-3 h-[40vh] border-2 border-solid border-white mt-[5vh];
+    
 }
-.wrapper > img{
-    @apply h-60 mx-auto  mt-20
+.wrapper h4{
+    @apply text-lg text-yellow-600 mt-1
+}
+.temps{
+    @apply mt-5 
+}
+.wrapper h2{
+    @apply text-2xl text-yellow-600 text-center
 }

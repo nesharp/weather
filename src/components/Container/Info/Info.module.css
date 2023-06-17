@@ -2,11 +2,11 @@
     @apply w-[calc(100%-256px)] p-10 text-yellow-600 text-lg
 }
 .info span{
-    @apply font-["Pacifico"] italic 
+    @apply text-2xl text-yellow-600 font-["Pacifico"] 
 }
 .info h4 {
-    @apply text-4xl mt-10 ml-1
+    @apply text-2xl mt-8 mb-[40vh]
 }
-.info p{
+/* .info p{
     @apply w-60 text-justify mt-10 ml-1
-}
+} */

@@ -1,6 +1,11 @@
 .panel{
-    @apply bg-inherit  blur-3xl  w-64 h-[calc(100vh-80px)] rounded-3xl border-solid border-2 shadow-2xl border-white ml-8
+    @apply bg-inherit  blur-3xl  w-64 h-[calc(90vh)] rounded-3xl border-solid border-2 shadow-2xl border-white ml-8 mb-10
 }
-.panel h2{
-    @apply w-fit mx-auto text-2xl font-bold  text-yellow-600 m-5
+
+
+.panel input{
+    @apply w-[80%] border-2 border-solid border-white rounded-lg  bg-transparent my-5 mx-[10%] py-1  focus:p-2 transition-all focus:outline-none text-yellow-600 text-center text-lg shadow-md focus:shadow-2xl focus:mb-3
+}
+.panel img{
+    @apply  rounded-2xl  h-32 mt-10 w-32 mx-auto bg-transparent  ml-12 shadow-lg border-solid border-2 border-white
 }

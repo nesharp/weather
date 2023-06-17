@@ -1,15 +1,13 @@
 .block{
-    @apply bg-inherit h-5/6 w-32 mx-5 rounded-lg shadow-lg my-4 hover:shadow-2xl  hover:my-2 transition-all;
+    @apply bg-inherit h-5/6 w-32 mx-6 rounded-lg shadow-xl my-4 hover:shadow-2xl  hover:my-2 transition-all border-solid border-2 border-white text-center
 }
 .block h6{
     @apply text-center text-sm m-3;
 }
 .block img{
-    @apply h-2/5 m-0 p-0 mx-3;
+    @apply h-2/5 m-0 p-0 w-auto ; 
 }
-.block h4{
-    @apply text-center text-sm font-bold m-0 p-0;
-}
+
 .block h5{
-    @apply text-right text-xl font-bold mx-5;
+    @apply text-xl font-bold mx-5;
 }

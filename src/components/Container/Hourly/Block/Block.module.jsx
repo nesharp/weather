@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Block.module.css";
+import { toCelsius } from "../../../../logic/logic";
 
-export const Block = ({info}) => {
+export const Block = ({ info }) => {
+    const [date, setDate] = useState(info.dt_txt.split(" ")[0])
+    const [id, setId] = useState(info.weather[0].icon)
+    const [temp, setTemp] = useState(toCelsius(info.main.temp))
+    console.log(info)
     return (
-        <div className={styles.block}>
-            <h6> {info.time} </h6>
-            <img src={info.image} alt="" />
-            <h4>{info.text}</h4>
-            <h5>{info.temp_c}°</h5>
-        </div>)
+			<div className={styles.block}>
+				<h6>{date} </h6>
+				<img src={`http://openweathermap.org/img/w/${id}.png`} alt='' />
+            <h5>{ temp }°C</h5>
+			</div>
+		)
 }
