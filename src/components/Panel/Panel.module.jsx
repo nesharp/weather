@@ -16,8 +16,8 @@ export const Panel = ({ children }) => {
 	useEffect(() => {
 		useWeather(city)
 	}, [])
-	const response = useWeather(city)
-	response.catch(e => { navigate('error')})
+	// const response = useWeather(city)
+	// response.catch(e => { navigate('error')})
 	return (
 		<div className={styles.panel}>
 			<input
