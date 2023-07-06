@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './Panel.module.css'
 import { store } from '../../store/root'
 import { useWeather } from '../../hooks/useWeather'
@@ -16,8 +16,8 @@ export const Panel = ({ children }) => {
 	useEffect(() => {
 		useWeather(city)
 	}, [])
-	const response = useWeather(city)
-	response.catch(e => { navigate('error')})
+	// const response = useWeather(city)
+	// response.catch(e => { navigate('error')})
 	return (
 		<div className={styles.panel}>
 			<input
