@@ -1,25 +1,23 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import styles from './Panel.module.css'
-import { getData } from '../../data'
 import { store } from '../../store/root'
+import { useWeather } from '../../hooks/useWeather'
 import { useNavigate } from 'react-router-dom'
 
 export const Panel = ({ children }) => {
+	const navigate = useNavigate()
 	const [city, setCity] = useState('Kyiv')
 	const [image, setImage] = useState('')
 	const input = useRef(null)
-	const navigate = useNavigate()
 	store.subscribe(() => {
-		if (store.getState().weather.error !== 'error') {
-			const id = store.getState().weather.list[0].weather[0].icon
-			setImage(`http://openweathermap.org/img/w/${id}.png`)
-		} else {
-			navigate('/error')
-		}
+		const id = store.getState().weather.list[0].weather[0].icon
+		setImage(`http://openweathermap.org/img/w/${id}.png`)
 	})
 	useEffect(() => {
-		getData(city)
+		useWeather(city)
 	}, [])
+	const response = useWeather(city)
+	response.catch(e => { navigate('error')})
 	return (
 		<div className={styles.panel}>
 			<input
@@ -31,7 +29,7 @@ export const Panel = ({ children }) => {
 				value={city}
 				onKeyDown={e => {
 					if (e.key === 'Enter') {
-						getData(city)
+						useWeather(city)
 						e.target.blur()
 					}
 				}}

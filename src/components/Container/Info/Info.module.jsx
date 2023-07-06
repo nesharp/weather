@@ -7,10 +7,8 @@ export const Info = ({ children }) => {
 	const [desc, setDesk] = useState('')
 	const [wind, setWind] = useState({})
 	store.subscribe(() => {
-		if (store.getState().weather.error !== 'error') {
-			setDesk(store.getState().weather.list[0].weather[0].description)
-			setWind(store.getState().weather.list[0].wind)
-		}
+		setDesk(store.getState().weather.list[0].weather[0].description)
+		setWind(store.getState().weather.list[0].wind)
 	})
 	return (
 		<div className={styles.info}>

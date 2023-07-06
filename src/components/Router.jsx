@@ -5,7 +5,6 @@ import { Panel } from './Panel/Panel.module'
 import { Temperature } from './Panel/Temperature/Temperature.module'
 import { Info } from './Container/Info/Info.module'
 import { Hourly } from './Container/Hourly/Hourly.module'
-import { ErrorPage } from './ErrorPage/errorPage'
 export const Router = () => {
 	return (
 		<BrowserRouter>
@@ -21,10 +20,13 @@ export const Router = () => {
 							<Info>
 								<Hourly></Hourly>
 							</Info>
+							{/* <Map/> */}
 						</Container>
 					}
 				/>
-				<Route path='*' element={<ErrorPage/>} />
+				{/* <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} /> */}
+				<Route path='*' element={<>Not found</>} />
 			</Routes>
 		</BrowserRouter>
 	)

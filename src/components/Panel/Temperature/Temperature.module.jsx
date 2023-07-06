@@ -1,5 +1,4 @@
 import React from 'react'
-import { lost_data } from '../../../../src/data.js'
 import styles from './Temperature.module.css'
 import { useState } from 'react'
 import { store } from '../../../store/root'
@@ -10,13 +9,11 @@ export const Temperature = () => {
 	const [tempMin, setTempMin] = useState(0)
 	const [feels, setFeels] = useState(0)
 	store.subscribe(() => {
-		if (store.getState().weather.error !== 'error') {
-			const temps = store.getState().weather.list[0].main
-			setTemp(toCelsius(temps.temp))
-			setTempMax(toCelsius(temps.temp_max))
-			setTempMin(toCelsius(temps.temp_min))
-			setFeels(toCelsius(temps.feels_like))
-		}
+		const temps = store.getState().weather.list[0].main
+		setTemp(toCelsius(temps.temp))
+		setTempMax(toCelsius(temps.temp_max))
+		setTempMin(toCelsius(temps.temp_min))
+		setFeels(toCelsius(temps.feels_like))
 	})
 	return (
 		<div className={styles.wrapper}>
