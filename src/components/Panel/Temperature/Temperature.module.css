@@ -1,13 +1,12 @@
-.wrapper{
-    @apply bg-transparent w-[90%] mx-auto  shadow-lg rounded-xl p-3 h-[40vh] border-2 border-solid border-white mt-[5vh];
-    
+.wrapper {
+	@apply bg-transparent w-[90%] mx-auto  shadow-lg rounded-xl p-3 h-[40vh] border-2 border-solid border-white mt-[5vh] transition-all ;
 }
-.wrapper h4{
-    @apply text-lg text-yellow-600 mt-1
+.wrapper h4 {
+	@apply text-lg text-yellow-600 mt-1 transition-all delay-1000;
 }
-.temps{
-    @apply mt-5 
+.temps {
+	@apply mt-5 transition-all delay-1000;
 }
-.wrapper h2{
-    @apply text-2xl text-yellow-600 text-center
+.wrapper h2 {
+	@apply text-2xl text-yellow-600 text-center transition-all delay-1000;
 }
