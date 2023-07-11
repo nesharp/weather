@@ -11,7 +11,7 @@ export const Panel = ({ children }) => {
 	const input = useRef(null)
 	store.subscribe(() => {
 		const id = store.getState().weather.list[0].weather[0].icon
-		setImage(`http://openweathermap.org/img/w/${id}.png`)
+		setImage(`https://openweathermap.org/img/w/${id}.png`)
 	})
 	useEffect(() => {
 		useWeather(city)
