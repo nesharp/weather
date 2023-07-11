@@ -8,7 +8,7 @@ export const useWeather = async city => {
 	let lat, lon
 	const coordinates = await axios({
 		method: 'get',
-		url: `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${
+		url: `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${
 			process.env.REACT_APP_API_KEY || api
 		}`,
 		headers: {}
@@ -18,7 +18,7 @@ export const useWeather = async city => {
 	})
 	const response = await axios({
 		method: 'get',
-		url: `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${
+		url: `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${
 			process.env.REACT_APP_API_KEY || api
 		}`
 	}).catch(error => {
